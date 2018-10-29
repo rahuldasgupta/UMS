@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.nav {
+    list-style-type: none;
+    margin: 0 auto;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #07799B;
+}
+
+#navx {
+    float: left;
+}
+
+#navx a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+#navx a:hover {
+    background-color: #054A64;
+}
+body
+{
+  background-image: url(bgimage.jpg);
+  margin: 0px;
+  padding: 0px;
+}
+#banner{
+  width: 100%;
+
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    padding-left: 51px;
+    padding-right: 51px;
+    background-color: inherit;
+    font-size: 15px;
+    font-family: sans-serif;
+    margin: 0;
+}
+.dropdown:hover .dropbtn {
+    background-color:#054A64 ;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: #07799B;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#usericon{
+  float:left;
+  border: 3px solid #777575;
+  border-radius: 4px;
+}
+#navy
+{
+  padding-left: 3px;
+  padding-top: 4px;
+  font-family:monospace;
+  font-size:16px;
+  color: #818181;
+}
+#navy:hover {
+    color: #065CC3;
+    font-size: 17px;
+}
+#sec1
+{
+  float: left;
+  height: 850px;
+  width: 275px;
+  padding-left: 10px;
+  border-right: 1.5px solid #C9CFC7;
+}
+
+input[type=text],input[type=date],input[type=number], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+input[type=submit] {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #148D82;
+}
+
+#rmsform {
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    padding: 30px;
+    margin-left: 15px;
+    margin-top: 15px;
+    float: left;
+    width: 72.1%;
+}
+[type="radio"]:checked,
+[type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+}
+[type="radio"]:checked + label,
+[type="radio"]:not(:checked) + label
+{
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+}
+[type="radio"]:checked + label:before,
+[type="radio"]:not(:checked) + label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+}
+[type="radio"]:checked + label:after,
+[type="radio"]:not(:checked) + label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #148D82;
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+}
+[type="radio"]:not(:checked) + label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+}
+[type="radio"]:checked + label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+textarea {
+    width: 100%;
+    height: 150px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    background-color: #f8f8f8;
+    font-size: 16px;
+    resize: none;
+}
+#studentanalysis
+{
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    margin-top: 25px;
+    float: left;
+    width: 93%;
+    height: 159px;
+    font-style: oblique;
+    font-family: monospace;
+    border-style: solid;
+    border-color: #03849E;
+}
+#sidelist{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color: #F0F0F0;
+}
+#sidelistx a {
+    display: block;
+    color: #000;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-decoration: none;
+}
+#sidelistx a:hover {
+    background-color: #07799B;
+    color: white;
+}
+#tips
+{
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  float: left;
+  width: 97%;
+  height: 146px;
+  font-style: oblique;
+  font-family: monospace;
+}
+</style>
+<script>
+  function fxn()
+  {
+    document.getElementById('blocknumbers').style.display="none";
+    document.getElementById('blockx').style.display="none";
+    document.getElementById('subblocknumbers').style.display="none";
+    document.getElementById('subblockx').style.display="none";
+  }
+  function fxn2()
+  {
+    document.getElementById('blocknumbers').style.display="block";
+    document.getElementById('blockx').style.display="block";
+    document.getElementById('subblocknumbers').style.display="block";
+    document.getElementById('subblockx').style.display="block";
+  }
+  function datasa()
+  {
+    document.getElementById('infodata1').innerHTML="CGPA : 8.25";
+    document.getElementById('infodata2').innerHTML="Attendance : 86%";
+    document.getElementById('infodata3').innerHTML="";
+  }
+  function datahi()
+  {
+    document.getElementById('infodata1').innerHTML="Hostel : BH3, 315-B";
+    document.getElementById('infodata2').innerHTML="Food : Yes";
+    document.getElementById('infodata3').innerHTML="Laundry : No";
+  }
+  function datafl()
+  {
+    document.getElementById('infodata1').innerHTML="No Faculty on Leave";
+    document.getElementById('infodata2').innerHTML="Enjoy your classes!";
+    document.getElementById('infodata3').innerHTML="";
+  }
+</script>
+</head>
+<body>
+  <div id="banner">
+    <img src="C:\Users\a\Downloads\FS Project\Untitled.png">
+  </div>
+<ul class="nav">
+  <li id="navx"><a href="home.html">Home</a></li>
+  <li id="navx"><a href="news.html">News</a></li>
+  <li id="navx"><a href="rms.html">RMS</a></li>
+  <li id="navx"><a href="profile.html">Profile</a></li>
+  <div class="dropdown">
+  <button class="dropbtn">Examination
+  </button>
+  <div class="dropdown-content">
+    <a href="marks.html">Marks</a>
+    <a href="#">Seating Plan</a>
+    <a href="#">Continous Assignments</a>
+  </div>
+</div>
+  <li id="navx"><a href="C:\Users\a\Downloads\FS Project\visitpage.html">Log out</a></li>
+</ul>
+<div id="sec1">
+  <br>
+  <img id="usericon" src="C:\Users\a\Downloads\FS Project\usericon.png" height="75px" width="75px">
+  <center><span style="font-family:monospace; font-size:18px;">Welcome Rahul</span>
+  <span style="font-family:monospace; font-size:18px;">(11601916)</span><br>
+  <span style="font-family:monospace; font-size:13px;">Section : <i>K1626</i></span><br>
+  <span style="font-family:monospace; font-size:13px;">B. Tech (CSE)</span></center><br><hr>
+    <ul id="sidenav" style="list-style-type:circle" >
+      <li id="navy">Group 2</li>
+      <li id="navy">Term : 318191</li>
+      <li id="navy">Books Issued : 0</li>
+      <li id="navy">Roll number - RK1626B34</li>
+    </ul><hr>
+    <br>
+    <img src="ribbon.png" width="261px">
+    <div id="tips">
+      <p style="text-align:center;font-family:monospace;font-size:18px;">Monday, 29th October</p>
+      <p style="text-align:center;font-family:sans-serif;;font-size:13px;padding-left:6px;padding-right:6px;">Sleep only at night. Avoid daytime sleep if possible. Daytime naps steal hours from nighttime rest. Limit daytime sleep to 20-minute, power naps.</p>
+    </div>
+    <div id="studentanalysis">
+      <div style="width:30%;float:left;text-align:center;"><ul id="sidelist">
+      <li id="sidelistx" onclick="datasa()"><a href="#home">Student Data</a></li>
+      <li id="sidelistx" onclick="datahi()"><a href="#home">Hostel Information</a></li>
+      <li id="sidelistx" onclick="datafl()"><a href="#home">Faculty on Leave</a></li>
+    </ul>
+  </div>
+      <div style="width: 40%;padding-left:55px;padding-top: 30px;float:left;font-size:12px;color: #03849E;font-family:monospace;">
+        <p id="infodata1"></p>
+        <p id="infodata2"></p>
+        <p id="infodata3"></p>
+      </div>
+    </div>
+</div>
+<div id="rmsform">
+  <form action="/action_page.php">
+    <input type="radio" id="test1" name="radio-group" checked onclick="fxn2()">
+    <label for="test1" style="margin-right:17px;margin-bottom:17px;">Complaint</label>
+    <input type="radio" id="test2" name="radio-group" onchange="fxn()">
+    <label for="test2" style="margin-right:17px;margin-bottom:17px;">Suggestion</label>
+    <input type="radio" id="test3" name="radio-group" onchange="fxn()">
+    <label for="test3" style="margin-right:17px;margin-bottom:17px;">Request</label>
+    <input type="radio" id="test4" name="radio-group" onchange="fxn()">
+    <label for="test4" style="margin-right:17px;margin-bottom:17px;">Enqire</label><br>
+    <label>Registration Number</label>
+    <input type="text" id="fname" name="firstname" value="11601916" style="margin-bottom:17px;" disabled>
+    <label id="blockx">Block</label>
+    <select id="blocknumbers" name="blocknumbers">
+      <option>Baldev Raj Mittal Auditorium</option>
+      <option>Campus Cafe</option>
+      <option>Uni Hospital</option>
+      <option>School of Designing & Architecture</option>
+      <option>School of Pharmacy</option>
+      <option>Girls Hostel 1</option>
+      <option>Girls Hostel 2</option>
+      <option>Girls Hostel 3</option>
+      <option>Girls Hostel 4</option>
+      <option>Divison of Students Affairs</option>
+      <option>School of Business</option>
+      <option>School of Hospitality Management</option>
+      <option>School of Law</option>
+      <option>Chancellory</option>
+      <option>Administrative Block</option>
+      <option>School of Computer Engineering</option>
+      <option>Library</option>
+      <option>Boys Hostel 1</option>
+      <option>Boys Hostel 2</option>
+      <option>Boys Hostel 3</option>
+      <option>Boys Hostel 4</option>
+      <option>School of Mechanical Engineering</option>
+    </select>
+    <label id="subblockx">Sub Block</label>
+    <select id="subblocknumbers" name="blocknumbers">
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+      <option>D</option>
+      <option>E</option>
+      <option>F</option>
+    </select>
+    <label>Room No.</label>
+    <input type="number" id="rno" style="margin-bottom:17px;">
+    <label>Date</label>
+    <input type="date" id="datepicker">
+    <label>Subject</label>
+    <input type="text" id="rno" style="margin-bottom:17px;">
+    <label>Description</label>
+    <textarea></textarea>
+    <input type="submit" value="Submit">
+  </form>
+</div>
+</body>
+</html>

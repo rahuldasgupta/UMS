@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+.nav {
+    list-style-type: none;
+    margin: 0 auto;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #07799B;
+}
+
+#navx {
+    float: left;
+}
+
+#navx a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+#navx a:hover {
+    background-color: #054A64;
+}
+body
+{
+  background-image: url("bgimage.jpg");
+  margin: 0px;
+  padding: 0px;
+}
+#banner{
+  width: 100%;
+
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    padding-left: 51px;
+    padding-right: 51px;
+    background-color: inherit;
+    font-size: 15px;
+    font-family: sans-serif;
+    margin: 0;
+}
+.dropdown:hover .dropbtn {
+    background-color:#054A64 ;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: #07799B;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#sec1
+{
+  float: left;
+  height: 730px;
+  width: 275px;
+  padding-left: 10px;
+  border-right: 1.5px solid #C9CFC7;
+}
+#usericon{
+  float:left;
+  border: 3px solid #777575;
+  border-radius: 4px;
+}
+#navy
+{
+  padding-left: 3px;
+  padding-top: 4px;
+  font-family:monospace;
+  font-size:16px;
+  color: #818181;
+}
+#navy:hover {
+    color: #065CC3;
+    font-size: 17px;
+}
+#sec2 {
+    border: 1px solid;
+    box-shadow: 5px 7px #A7A7A7;
+    float: left;
+    height: 70px;
+    width: 70px;
+    padding-right: 21px;
+    margin-left: 10px;
+    font-family:cursive;
+    padding-left: 21px;
+    padding-bottom: 8px;
+    text-align: center;
+    margin-bottom: 3px;
+}
+#attendence
+{
+  height: 280px;
+  width: 77.3%;
+  float: left;
+  padding-top: 25px;
+  margin-left: 10px;
+}
+#tt
+{
+  padding-left:26px;
+  font-size:27px;
+  font-family:monospace;
+  height: 87px;
+  float: left;
+  color: #065C6D;
+  font-style: oblique;
+  width: 70%;
+}
+#msgform {
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    padding: 19px;
+    margin-left: 38px;
+    margin-top: 45px;
+    float: left;
+    width: 37.2%;
+    height: 150px;
+    font-style: oblique;
+    font-family: monospace;
+    border-style: solid;
+    border-color: #03849E;
+}
+input[type=button] {
+    width: 27px;
+    background-color: #148D82;
+    color: white;
+    margin-top: 20px;
+    margin-left: 5px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 27px;
+    text-align: center;
+}
+
+input[type=button]:hover {
+    background-color: #4CAF50;
+}
+#studentanalysis
+{
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    margin-top: 25px;
+    float: left;
+    width: 93%;
+    height: 159px;
+    font-style: oblique;
+    font-family: monospace;
+    border-style: solid;
+    border-color: #03849E;
+}
+#sidelist{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color:#07799B ;
+    color:#F0F0F0;
+}
+#sidelistx a {
+    display: block;
+    color: #000;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-decoration: none;
+}
+#sidelistx a:hover {
+    background-color: #F0F0F0;
+    color: #07799B;
+}
+#tips
+{
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  float: left;
+  width: 97%;
+  height: 146px;
+  font-style: oblique;
+  font-family: monospace;
+}
+#events
+{
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  padding-top: 0px;
+  padding-left: 10px;
+  margin-left: 65px;
+  margin-top: 45px;
+  float: left;
+  width: 27.2%;
+  height: 197px;
+  font-style: oblique;
+  font-family: monospace;
+}
+</style>
+<script>
+window.onload = function () {
+var chart = new CanvasJS.Chart("attendence", {
+animationEnabled: true,
+theme: "light2",
+title:{
+  text: "Attendance"
+},
+axisY: {
+		title: "Attendance in %"
+	},
+data: [{
+  type: "column",
+  dataPoints: [
+      { y: 100, label: "Computer Graphics" },
+      { y: 89,  label: "Ethics" },
+      { y: 91,  label: "Front End" },
+      { y: 84,  label: "Artificial Intelligence" },
+      { y: 33,  label: "Placement Class" },
+      { y: 81,  label: "Marketing" },
+      { y: 91, label: "Verbal Ability" },
+      { y: 75,  label: "Analytical Skills" }
+  ]
+}]
+});
+chart.render();
+}
+function fxn1()
+{
+  document.getElementById('timeclass1').innerHTML="37-708";
+  document.getElementById('timeclass1').style.fontSize="103%";
+  document.getElementById('timeclass1').style.fontStyle="italic";
+}
+function fxn2()
+{
+  document.getElementById('timeclass2').innerHTML="37-609";
+  document.getElementById('timeclass2').style.fontSize="103%";
+  document.getElementById('timeclass2').style.fontStyle="italic";
+}
+function fxn3()
+{
+  document.getElementById('timeclass3').innerHTML="37-610";
+  document.getElementById('timeclass3').style.fontSize="103%";
+  document.getElementById('timeclass3').style.fontStyle="italic";
+}
+function fxn4()
+{
+  document.getElementById('timeclass4').innerHTML="37-702";
+  document.getElementById('timeclass4').style.fontSize="103%";
+  document.getElementById('timeclass4').style.fontStyle="italic";
+}
+function fxn5()
+{
+  document.getElementById('timeclass5').innerHTML="34-213";
+  document.getElementById('timeclass5').style.fontSize="103%";
+  document.getElementById('timeclass5').style.fontStyle="italic";
+}
+function msg1()
+{
+  document.getElementById('m1').innerHTML="Dear Student, The interface for giving preference for Open Electives is now open for you. You are advised to give your preference for Open Electives. This will help us in offering the course of your choice during final (actual) polling.  To know more about the course you may consult you teachers.";
+}
+function msg2()
+{
+  document.getElementById('m1').innerHTML="Dear Students, You all need to submit your projects on GitHub till 28th Oct 2018 12 Midnight. You can upload the link of Github repository on your ums account if the link is available. There is no need for PPT just your project should be in running condition and working on laptops";
+}
+function msg3()
+{
+  document.getElementById('m1').innerHTML="Your Duty Leave for event for Microsoft Technical Community - UniversuMM for workshop on Full Stack Web Developing on 27th September, 28th September and 29th September has been approved, and the same has been updated on your UMS. For any issuse, contact Mr. Ashok, Department of Student Affairs."
+;
+}
+function msg4()
+{
+  document.getElementById('m1').innerHTML="LPU is conducting Guinness Book of World record on 1st November 2018 in the category of Punjabi Folk Dance Bhangra in which the record will be filed as world largest no. of Bhangra dancer dancing together. 1. Duty leaves will be given to students on 31st october and 1st November. Attire - Males: Kurta Pajama, Females: Punjabi Salwar Suit. ";
+}
+function msg6()
+{
+  document.getElementById('m1').innerHTML="hi";
+}
+function msg7()
+{
+  document.getElementById('m1').innerHTML="hi";
+}
+function msg8()
+{
+  document.getElementById('m1').innerHTML="Dear Student, This is your chance to Get Recognition at National Level. TechGig is organising Virtual Campus League 2018 which is India's Biggest Inter-College Coding Event. You are just a few steps away from 500+ Jobs and Internship opportunities with top IT companies. Link: https://www.techgig.com/virtualcampus";
+}
+function datasa()
+{
+  document.getElementById('infodata1').innerHTML="CGPA : 8.25";
+  document.getElementById('infodata2').innerHTML="Attendance : 86%";
+  document.getElementById('infodata3').innerHTML="";
+}
+function datahi()
+{
+  document.getElementById('infodata1').innerHTML="Hostel : BH3, 315-B";
+  document.getElementById('infodata2').innerHTML="Food : Yes";
+  document.getElementById('infodata3').innerHTML="Laundry : No";
+}
+function datafl()
+{
+  document.getElementById('infodata1').innerHTML="No Faculty on Leave";
+  document.getElementById('infodata2').innerHTML="Enjoy your classes!";
+  document.getElementById('infodata3').innerHTML="";
+}
+function newevent()
+{
+  document.getElementById('event2').innerHTML="Event  - Joy of Giving Week";
+  document.getElementById('event3').innerHTML="An charity event has been organized by Divison of Student Welfare to donate our spare clothes to needy this Diwali";
+  document.getElementById('event4').innerHTML="Venue - All boys & girls hostel | Date : 31th October";
+}
+</script>
+</head>
+<body>
+  <div id="banner">
+    <img src="C:\Users\a\Downloads\FS Project\Untitled.png">
+  </div>
+<ul class="nav">
+  <li id="navx"><a class="active" href="">Home</a></li>
+  <li id="navx"><a href="C:\Users\a\Downloads\FS Project\news.html">News</a></li>
+  <li id="navx"><a href="#contact">RMS</a></li>
+  <li id="navx"><a href="#about">Profile</a></li>
+  <div class="dropdown">
+  <button class="dropbtn">Examination
+  </button>
+  <div class="dropdown-content">
+    <a href="#">Marks</a>
+    <a href="#">Seating Plan</a>
+    <a href="#">Continous Assignments</a>
+  </div>
+</div>
+  <li id="navx"><a href="C:\Users\a\Downloads\FS Project\visitpage.html">Log out</a></li>
+</ul>
+<div id="sec1">
+  <br>
+  <img id="usericon" src="C:\Users\a\Downloads\FS Project\usericon.png" height="75px" width="75px">
+  <center><span style="font-family:monospace; font-size:18px;">Welcome Rahul</span>
+  <span style="font-family:monospace; font-size:18px;">(11601916)</span><br>
+  <span style="font-family:monospace; font-size:13px;">Section : <i>K1626</i></span><br>
+  <span style="font-family:monospace; font-size:13px;">B. Tech (CSE)</span></center><br><hr>
+    <ul id="sidenav" style="list-style-type:circle" >
+      <li id="navy">Group 2</li>
+      <li id="navy">Term : 318191</li>
+      <li id="navy">Books Issued : 0</li>
+      <li id="navy">Roll number - RK1626B34</li>
+    </ul><hr>
+    <br>
+    <img src="ribbon.png" width="261px">
+    <div id="tips">
+      <p style="text-align:center;font-family:monospace;font-size:18px;">Monday, 29th October</p>
+      <p style="text-align:center;font-family:sans-serif;;font-size:13px;padding-left:6px;padding-right:6px;">Sleep only at night. Avoid daytime sleep if possible. Daytime naps steal hours from nighttime rest. Limit daytime sleep to 20-minute, power naps.</p>
+    </div>
+    <div id="studentanalysis">
+      <div style="width:30%;float:left;text-align:center;"><ul id="sidelist">
+      <li id="sidelistx" onclick="datasa()"><a href="#home">Student Data</a></li>
+      <li id="sidelistx" onclick="datahi()"><a href="#home">Hostel Information</a></li>
+      <li id="sidelistx" onclick="datafl()"><a href="#home">Faculty on Leave</a></li>
+    </ul>
+  </div>
+      <div style="width: 40%;padding-left:55px;padding-top: 30px;float:left;font-size:13px;color: #03849E;font-family:monospace;">
+        <p id="infodata1"></p>
+        <p id="infodata2"></p>
+        <p id="infodata3"></p>
+      </div>
+    </div>
+</div>
+<div id="tt">
+  <p>Today's Timetable</p>
+</div>
+<div id="sec2">
+  <p onmouseover="fxn1()">INT404</p>
+  <p id="timeclass1" onmouseover="fxn1()" style="color: #065C6D;text-align: center;font-size:14px;font-family: monospace;"><i>9 pm</i></p>
+</div>
+<div id="sec2">
+  <p onmouseover="fxn2()">PEA305</p>
+  <p id="timeclass2" onmouseover="fxn2()" style="color: #065C6D;text-align: center;font-size:14px;font-family: monospace;"><i>10 am</i></p>
+</div>
+<div id="sec2">
+  <p onmouseover="fxn3()">PEV107</p>
+  <p id="timeclass3" onmouseover="fxn3()" style="color: #065C6D;text-align: center;font-size:14px;font-family: monospace;"><i>11 am</i></p>
+</div>
+<div id="sec2">
+  <p onmouseover="fxn4()">CSE322</p>
+  <p id="timeclass4" onmouseover="fxn4()"style="color: #065C6D;text-align: center;font-size:14px;font-family: monospace;"><i>12 am</i></p>
+</div>
+<div id="sec2">
+  <p onmouseover="fxn5()">INT219</p>
+  <p id="timeclass5" onmouseover="fxn5()" style="color: #065C6D;text-align: center;font-size:14px;font-family: monospace;"><i>4 pm</i></p>
+</div>
+<div id="attendence">
+  <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</div>
+<div id="msgform">
+    <p id="m1">Dear Student, The interface for giving preference for Open Electives is now open for you. You are advised to give your preference for Open Electives. This will help us in offering the course of your choice during final (actual) polling.  To know more about the course you may consult you teachers.</p>
+    <div style="margin-left:93px;">
+    <form>
+    <input type="button" value="1" onclick="msg1()">
+    <input type="button" value="2" onclick="msg2()">
+    <input type="button" value="3" onclick="msg3()">
+    <input type="button" value="4" onclick="msg4()">
+    <input type="button" value="5" onclick="msg5()">
+    <input type="button" value="6" onclick="msg6()">
+    <input type="button" value="7" onclick="msg7()">
+    <input type="button" value="8" onclick="msg8()">
+  </form></div>
+</div>
+<div id="events" onmouseover="newevent()">
+  <div style="background-color:#016787;padding-left: 10px;margin-right:10px;padding-top: 1px;font-family:monospace;font-size:18px;color:white"></p>Upcoming Events</p></div>
+  <p id="event2" style=""><label style="color:#016787;font-style: normal;">Event</label> - Born To Win <em>30th October</em></p>
+  <p id="event3">Divison of Student Welfare brings Prince Narula to share his story to fame and motivate</p>
+  <p id="event4"><label style="color:#016787;font-style: normal;">Venue</label> : Shanti Devi Mittal Auditorium <label style="color:#016787;font-style: normal;">| Time</label> : 4 pm onwards</p>
+</div>
+</body>
+</html>

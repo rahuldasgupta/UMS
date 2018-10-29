@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Marks - UMS</title>
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( "#accordion" ).accordion({
+      collapsible: true
+    });
+  } );
+  </script>
+<style>
+.nav {
+    list-style-type: none;
+    margin: 0 auto;
+    margin-left: 6px;
+    margin-right: 6px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #07799B;
+}
+
+#navx {
+    float: left;
+}
+
+#navx a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding-right: 50px;
+  padding-left: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  margin: 5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: sans-serif;
+}
+
+#navx a:hover {
+    background-color: #054A64;
+}
+body
+{
+  background-image: url(bgimage.jpg);
+  margin: 0px;
+  padding: 0px;
+}
+#banner{
+  width: 100%;
+
+}
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+.dropdown .dropbtn {
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    padding-left: 51px;
+    padding-right: 51px;
+    background-color: inherit;
+    font-size: 15px;
+    font-family: sans-serif;
+    margin: 0;
+}
+.dropdown:hover .dropbtn {
+    background-color:#054A64 ;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+    color: #07799B;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#usericon{
+  float:left;
+  border: 3px solid #777575;
+  border-radius: 4px;
+}
+#navy
+{
+  padding-left: 3px;
+  padding-top: 4px;
+  font-family:monospace;
+  font-size:16px;
+  color: #818181;
+}
+#navy:hover {
+    color: #065CC3;
+    font-size: 17px;
+}
+#sec1
+{
+  float: left;
+  height: 740px;
+  width: 275px;
+  padding-left: 10px;
+  border-right: 1.5px solid #C9CFC7;
+}
+#studentanalysis
+{
+    border-radius: 5px;
+    background-color: #F0F0F0;
+    margin-top: 25px;
+    float: left;
+    width: 93%;
+    height: 159px;
+    font-style: oblique;
+    font-family: monospace;
+    border-style: solid;
+    border-color: #03849E;
+}
+#sidelist{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 100px;
+    background-color: #F0F0F0;
+}
+#sidelistx a {
+    display: block;
+    color: #000;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    padding-left: 6px;
+    padding-right: 6px;
+    text-decoration: none;
+}
+#sidelistx a:hover {
+    background-color: #07799B;
+    color: white;
+}
+#tips
+{
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  float: left;
+  width: 97%;
+  height: 146px;
+  font-style: oblique;
+  font-family: monospace;
+}
+#accordion
+{
+  float:left;
+  margin-left:20px;
+  width:76%;
+}
+</style>
+<script>
+  function datasa()
+  {
+    document.getElementById('infodata1').innerHTML="CGPA : 8.25";
+    document.getElementById('infodata2').innerHTML="Attendance : 86%";
+    document.getElementById('infodata3').innerHTML="";
+  }
+  function datahi()
+  {
+    document.getElementById('infodata1').innerHTML="Hostel : BH3, 315-B";
+    document.getElementById('infodata2').innerHTML="Food : Yes";
+    document.getElementById('infodata3').innerHTML="Laundry : No";
+  }
+  function datafl()
+  {
+    document.getElementById('infodata1').innerHTML="No Faculty on Leave";
+    document.getElementById('infodata2').innerHTML="Enjoy your classes!";
+    document.getElementById('infodata3').innerHTML="";
+  }
+</script>
+</head>
+<body>
+  <div id="banner">
+    <img src="C:\Users\a\Downloads\FS Project\Untitled.png">
+  </div>
+<ul class="nav">
+  <li id="navx"><a href="home.html">Home</a></li>
+  <li id="navx"><a href="news.html">News</a></li>
+  <li id="navx"><a href="rms.html">RMS</a></li>
+  <li id="navx"><a href="profile.html">Profile</a></li>
+  <div class="dropdown">
+  <button class="dropbtn">Examination
+  </button>
+  <div class="dropdown-content">
+    <a href="#">Marks</a>
+    <a href="#">Seating Plan</a>
+    <a href="#">Continous Assignments</a>
+  </div>
+</div>
+  <li id="navx"><a href="C:\Users\a\Downloads\FS Project\visitpage.html">Log out</a></li>
+</ul>
+<div id="sec1">
+  <br>
+  <img id="usericon" src="C:\Users\a\Downloads\FS Project\usericon.png" height="75px" width="75px">
+  <center><span style="font-family:monospace; font-size:18px;">Welcome Rahul</span>
+  <span style="font-family:monospace; font-size:18px;">(11601916)</span><br>
+  <span style="font-family:monospace; font-size:13px;">Section : <i>K1626</i></span><br>
+  <span style="font-family:monospace; font-size:13px;">B. Tech (CSE)</span></center><br><hr>
+    <ul id="sidenav" style="list-style-type:circle" >
+      <li id="navy">Group 2</li>
+      <li id="navy">Term : 318191</li>
+      <li id="navy">Books Issued : 0</li>
+      <li id="navy">Roll number - RK1626B34</li>
+    </ul><hr>
+    <br>
+    <img src="ribbon.png" width="261px">
+    <div id="tips">
+      <p style="text-align:center;font-family:monospace;font-size:18px;">Monday, 29th October</p>
+      <p style="text-align:center;font-family:sans-serif;;font-size:13px;padding-left:6px;padding-right:6px;">Sleep only at night. Avoid daytime sleep if possible. Daytime naps steal hours from nighttime rest. Limit daytime sleep to 20-minute, power naps.</p>
+    </div>
+    <div id="studentanalysis">
+      <div style="width:30%;float:left;text-align:center;"><ul id="sidelist">
+      <li id="sidelistx" onclick="datasa()"><a href="#home">Student Data</a></li>
+      <li id="sidelistx" onclick="datahi()"><a href="#home">Hostel Information</a></li>
+      <li id="sidelistx" onclick="datafl()"><a href="#home">Faculty on Leave</a></li>
+    </ul>
+  </div>
+      <div style="width: 40%;padding-left:55px;padding-top: 30px;float:left;font-size:12px;color: #03849E;font-family:monospace;">
+        <p id="infodata1"></p>
+        <p id="infodata2"></p>
+        <p id="infodata3"></p>
+      </div>
+    </div>
+</div>
+<div id="accordion">
+  <p style="background-color:#016787;color:white;margin-left:8.5px;padding-left:10px;padding-top: 9px;padding-bottom:9px;font-family:monospace;font-size:18px">Semester 1</p>
+  <div style="border-radius: 5px;background-color: #F0F0F0;padding: 30px;margin-left: 6px;margin-top: 1px;float: left;width: 93.5%;margin-bottom:25px;">
+    <div style="float:left;width:60%;">
+      <p style="margin-top:2px;color:#016787;font-size:20px;font-family:monospace;">Exam Date Sheet</p>
+      <p style="padding-top:4px;font-size:14.5px;font-family:sans-serif;">CSE101 :: COMPUTER PROGRAMMING</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">CSE104 :: COMPUTER PROGRAMMING LABORATORY</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">ECE132 :: BASIC ELECTRICAL AND ELECTRONICS ENGINEERING LABORATORY	</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">MEC103 :: ENGINEERING GRAPHICS</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">MTH165 :: MATHEMATICS FOR ENGINEERS</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">PEL121 :: COMMUNICATION SKILLS-I</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">PHY109 :: ENGINEERING PHYSICS</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">	PHY119 :: ENGINEERING PHYSICS LABORATORY</p>
+    </div>
+    <div style="margin-left:45px;float:left;width:20%;">
+      <p style="margin-top:2px;color:#016787;font-size:20px;font-family:monospace;">Reporting Time</p>
+      <p style="padding-top:4px;font-size:14.5px;font-family:sans-serif;"> 3 pm</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;"> 1 pm</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;"> 1 pm</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;"> 4 pm</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;"> 4 pm</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;"> 3 pm</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;"> 4 pm</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;"> 9 am</p>
+    </div>
+    <div style="margin-left:15px;float:left;width:10%;">
+      <p style="margin-top:2px;color:#016787;font-size:20px;font-family:monospace;">Venue</p>
+      <p style="padding-top:4px;font-size:14.5px;font-family:sans-serif;">17-Oct</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">20-Oct</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">22-Oct</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">24-Oct</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">26-Oct</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">28-Oct</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">30-Oct</p>
+      <p style="padding-top:2px;font-size:14.5px;font-family:sans-serif;">2-Nov</p>
+    </div>
+  </div>
+  </body>
+  </html>

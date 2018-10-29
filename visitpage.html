@@ -1,0 +1,90 @@
+<!doctype html>
+  <head>
+    <title>UMS - University Management System</title>
+    <script>
+      function validx()
+      {
+        var req=document.forms["sign"]["registration"].value;
+        if(req=="")
+        {
+          alert("Registration number cannot be empty");
+          return false;
+        }
+        var pswd=document.forms["sign"]["password"].value;
+        if(pswd=="")
+        {
+          alert("Password cannot be empty");
+          return false;
+        }
+      }
+    </script>
+    <style>
+    body
+    {
+      background-image: url("bgimage.jpg");
+    }
+    #icon
+    {
+      float: left;
+      width: 200px;
+    }
+    #univname
+    {
+      font-size: 37px;
+      font-style: oblique;
+      font-family: monospace;
+      color: #03849E;
+      float: left;
+      padding-left: 10px;
+      padding-top: 60px;
+    }
+    #sign1
+    {
+      padding-left: 498px;
+      padding-top: 255px;
+      font-size: 25px;
+      font-style: oblique;
+      font-family:cursive;
+      color: #03849E;
+    }
+    input[type=text],[type=password]
+    {
+      padding: 15px 20px;
+      margin: 8px 0;
+      display: inline-block;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    input[type=submit],[type=button]
+    {
+      width: 210px;
+      background-color: #148D82;
+      color: white;
+      padding: 13px 20px;
+      margin: 8px 0;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+    }
+    </style>
+  </head>
+  <body>
+    <div id="icon">
+      <img src="icon.png" height="200px" width="200px">
+    </div>
+    <div id="univname">
+      <span>Lovely Professional University</span>
+    </div>
+    <div id="sign1">
+      Sign In
+      <form name="sign" onsubmit="return validx()" method="post" action="C:\Users\a\Downloads\FS Project\home.html" >
+        <input type="text" name="registration" placeholder="Registration number">
+        <input type="password" name="password" placeholder="Password"><br>
+        <input type="submit" value="Sign in">
+        <input type="button" value="Forgot Password">
+      </form>
+    </div>
+  </body>
+</html>
