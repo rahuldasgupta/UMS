@@ -2,5 +2,12 @@
 University Management System
 This project contains ONLY the front end of an University website.
 
-It includes the following pages : Visiting page - login  
-| Homepage - timetable, overall attendance, upcoming events | Announcements | Log complaints | Student profile - update info | Marks/Grades - semester wise | Examination date sheet
+##### It includes the following pages : 
+  
+**_Visiting page_** - login  
+**_Homepage_** - timetable, overall attendance, upcoming events  
+**_Announcements_**  
+**_Log complaints_**  
+**_Student profile_** - update info  
+**_Marks/Grades_** - semester wise  
+**_Examination date sheet_**
