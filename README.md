@@ -1,6 +1,6 @@
 # UMS
 University Management System
-This project contains ONLY the front end of an University website.
+This project contains ONLY the front end of an University website. Languages used - HTML, CSS, JavaScript and jQuery.
 
 ##### It includes the following pages : 
   
